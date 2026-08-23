@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>GROVE Premium Store</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-container">
+
+      <div class="logo">
+        <span class="logo-text">GROVE</span>
+        <span class="logo-sub">PREMIUM STORE</span>
+      </div>
+
+     <nav class="nav">
+  <a href="#inicio">Inicio</a>
+  <a href="#productos">Productos</a>
+  <a href="#como-comprar">Cómo comprar</a>
+  <a href="#preguntas-frecuentes">Preguntas frecuentes</a>
+  <a href="#nosotros">Sobre nosotros</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+      <div class="header-actions">
+        <button id="auth-header-btn" class="login-btn" onclick="showAuth()">Iniciar sesión</button>
+
+        <button class="cart-btn" onclick="openCart()">
+          🛒 <span id="cart-count">0</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+<!-- HERO -->
+<section id="inicio" class="hero">
+  <div class="hero-content reveal">
+    <span class="tag">Selección premium · Importados · Atención personalizada</span>
+
+    <h1>Productos exclusivos para comprar mejor y vender con más estilo</h1>
+
+    <p>
+      Una selección curada de perfumes, tecnología y productos premium,
+      pensada para clientes exigentes y revendedores que buscan diferenciarse.
+    </p>
+
+    <div class="hero-highlights">
+      <span>✓ Stock seleccionado</span>
+      <span>✓ Compra minorista y mayorista</span>
+      <span>✓ Consultas por WhatsApp</span>
+    </div>
+
+    <div class="hero-buttons">
+      <a href="#productos" class="btn-primary">Explorar productos</a>
+
+      <a
+        href="https://wa.me/5491124975911?text=Hola%20quiero%20info%20sobre%20tus%20productos"
+        class="btn-secondary"
+        target="_blank"
+      >
+        Asesoramiento por WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-visual reveal">
+    <div class="hero-card">
+      <span class="hero-card-label">GROVE Selection</span>
+      <h3>Catálogo premium</h3>
+      <p>Productos elegidos por calidad, presentación y potencial de venta.</p>
+
+      <div class="hero-card-stats">
+        <div>
+          <strong>+Premium</strong>
+          <span>selección</span>
+        </div>
+        <div>
+          <strong>24h</strong>
+          <span>respuesta</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFICIOS PREMIUM -->
+<section class="benefits-strip reveal">
+  <div class="benefit-mini-card">
+    <span>01</span>
+    <strong>Envíos coordinados</strong>
+    <p>Coordinamos entrega o retiro según disponibilidad.</p>
+  </div>
+
+  <div class="benefit-mini-card">
+    <span>02</span>
+    <strong>Minorista y mayorista</strong>
+    <p>Opciones para compra personal o reventa.</p>
+  </div>
+
+  <div class="benefit-mini-card">
+    <span>03</span>
+    <strong>Atención personalizada</strong>
+    <p>Consultas directas por WhatsApp antes de comprar.</p>
+  </div>
+
+  <div class="benefit-mini-card">
+    <span>04</span>
+    <strong>Productos seleccionados</strong>
+    <p>Catálogo curado con estética premium.</p>
+  </div>
+</section>
+
+<!-- PRODUCTOS DESTACADOS -->
+<section class="section featured-section reveal">
+  <span class="section-kicker">Selección GROVE</span>
+
+  <h2>Productos destacados</h2>
+
+  <p class="section-subtitle">
+    Los más consultados de nuestra selección premium.
+  </p>
+
+  <div id="featured-products" class="featured-products-grid"></div>
+</section>
+
+<!-- PRODUCTOS -->
+<section id="productos" class="section reveal">
+
+  <h2>Explorar por categoría</h2>
+
+  <p class="section-subtitle">
+    Elegí una categoría para ver productos específicos.
+  </p>
+
+  <div class="categories-filter">
+  <button class="category-btn active" onclick="filterProducts('todos', this)">Todos</button>
+  <button class="category-btn" onclick="filterProducts('perfumes-hombre', this)">Perfumes de hombre</button>
+  <button class="category-btn" onclick="filterProducts('perfumes-mujer', this)">Perfumes de mujer</button>
+  <button class="category-btn" onclick="filterProducts('mayorista', this)">Mayorista</button>
+  <button class="category-btn" onclick="filterProducts('tecnologia', this)">Tecnología</button>
+</div>
+
+
+<div class="products-toolbar">
+  <h3 id="category-title" class="category-title">Todos los productos</h3>
+
+  <div class="products-tools">
+    <div class="search-box">
+     <input
+  type="search"
+  id="product-search"
+  name="grove-product-search-no-email"
+  placeholder="Buscar producto..."
+  autocomplete="new-password"
+  autocorrect="off"
+  autocapitalize="off"
+  spellcheck="false"
+  inputmode="search"
+  oninput="changeSearch(this.value)"
+>
+    </div>
+
+    <div class="sort-box">
+      <label for="sort-select">Ordenar por</label>
+
+      <select class="line-filter-select" onchange="changeLine(this.value)">
+  <option value="todas">Todas las líneas</option>
+  <option value="Khamrah">Khamrah</option>
+  <option value="Yara">Yara</option>
+  <option value="Asad">Asad</option>
+  <option value="9PM">9PM</option>
+  <option value="Badee Al Oud">Badee Al Oud</option>
+  <option value="Club De Nuit">Club De Nuit</option>
+  <option value="Fakhar">Fakhar</option>
+  <option value="Amber Oud">Amber Oud</option>
+  <option value="Qaed Al Fursan">Qaed Al Fursan</option>
+  <option value="Odyssey">Odyssey</option>
+</select>
+      
+      <select id="sort-select" onchange="changeSort(this.value)">
+        <option value="default">Relevancia</option>
+        <option value="price-asc">Menor precio</option>
+        <option value="price-desc">Mayor precio</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<div id="products-container" class="products-grid"></div>
+
+</section>
+
+<!-- CÓMO COMPRAR -->
+<section id="como-comprar" class="section how-to-buy reveal">
+  <span class="section-kicker">Proceso simple</span>
+
+  <h2>Cómo comprar</h2>
+
+  <p class="section-subtitle">
+    Elegí tus productos, armá tu pedido y coordinamos la compra de forma personalizada.
+  </p>
+
+  <div class="steps-grid">
+    <div class="step-card">
+      <span>01</span>
+      <h3>Elegí tu producto</h3>
+      <p>
+        Explorá el catálogo, filtrá por categoría o buscá el producto que querés.
+      </p>
+    </div>
+
+    <div class="step-card">
+      <span>02</span>
+      <h3>Agregalo al carrito</h3>
+      <p>
+        Sumá productos al carrito y revisá tu pedido antes de finalizar.
+      </p>
+    </div>
+
+    <div class="step-card">
+      <span>03</span>
+      <h3>Coordinamos por WhatsApp</h3>
+      <p>
+        Al finalizar, nos llega tu consulta y coordinamos stock, pago, retiro o envío.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- MAYORISTA PREMIUM -->
+<section class="section wholesale-section reveal">
+  <div class="wholesale-card">
+    <div class="wholesale-content">
+      <span class="section-kicker">Venta mayorista</span>
+
+      <h2>Comprá para revender</h2>
+
+      <p>
+        Accedé a productos seleccionados con estética premium, ideales para sumar
+        a tu catálogo, armar combos o vender por unidad con una propuesta diferencial.
+      </p>
+
+      <div class="wholesale-points">
+        <div>
+          <strong>✓ Productos seleccionados</strong>
+          <span>Perfumes, tecnología y artículos premium.</span>
+        </div>
+
+        <div>
+          <strong>✓ Consulta por cantidad</strong>
+          <span>Coordinamos disponibilidad según stock.</span>
+        </div>
+
+        <div>
+          <strong>✓ Atención personalizada</strong>
+          <span>Te asesoramos para armar tu pedido.</span>
+        </div>
+      </div>
+
+      <a
+        href="https://wa.me/5491124975911?text=Hola%20quiero%20consultar%20por%20compra%20mayorista"
+        class="btn-primary"
+        target="_blank"
+      >
+        Consultar mayorista
+      </a>
+    </div>
+
+    <div class="wholesale-visual">
+      <span>GROVE</span>
+      <h3>Wholesale</h3>
+      <p>Selección premium para revendedores.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ / PREGUNTAS FRECUENTES -->
+<section id="preguntas-frecuentes" class="section faq-section reveal">
+  <span class="section-kicker">Dudas frecuentes</span>
+
+  <h2>Preguntas frecuentes</h2>
+
+  <p class="section-subtitle">
+    Te contamos cómo funciona la compra, la entrega y la atención personalizada.
+  </p>
+
+  <div class="faq-grid faq-accordion">
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span>¿Los productos tienen stock inmediato?</span>
+        <strong>+</strong>
+      </button>
+
+      <div class="faq-answer">
+        <p>
+          El stock se informa en cada producto. Antes de confirmar la compra,
+          coordinamos disponibilidad final por WhatsApp.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span>¿Cómo coordino el envío o retiro?</span>
+        <strong>+</strong>
+      </button>
+
+      <div class="faq-answer">
+        <p>
+          Al finalizar el pedido, nos llega tu consulta por WhatsApp y coordinamos
+          la mejor opción según tu zona.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span>¿Puedo comprar por mayor?</span>
+        <strong>+</strong>
+      </button>
+
+      <div class="faq-answer">
+        <p>
+          Sí. Podés consultar por cantidades, combos o productos para reventa desde
+          la sección mayorista o por WhatsApp.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span>¿Qué medios de pago aceptan?</span>
+        <strong>+</strong>
+      </button>
+
+      <div class="faq-answer">
+        <p>
+          Podés consultar pago por transferencia, efectivo u otras opciones según
+          el producto y la disponibilidad.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span>¿Cómo finalizo la compra?</span>
+        <strong>+</strong>
+      </button>
+
+      <div class="faq-answer">
+        <p>
+          Agregás productos al carrito, completás tus datos y finalizás el pedido.
+          Luego coordinamos la confirmación por WhatsApp.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span>¿Necesito crear una cuenta?</span>
+        <strong>+</strong>
+      </button>
+
+      <div class="faq-answer">
+        <p>
+          Sí. Para agregar productos al carrito o comprar ahora, necesitás iniciar
+          sesión o registrarte para que podamos identificar tu pedido.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE NOSOTROS -->
+<section id="nosotros" class="section about reveal">
+  <h2>Sobre nosotros</h2>
+
+  <p>
+    Somos una marca enfocada en ofrecer productos seleccionados,
+    con atención personalizada, confianza y una experiencia de compra exclusiva.
+  </p>
+</section>
+
+
+<!-- CONTACTO -->
+<section id="contacto" class="section contact reveal">
+  <h2>Contacto</h2>
+
+  <p>
+    ¿Querés hacer una consulta, comprar por mayor o recibir asesoramiento personalizado?
+  </p>
+
+  <a
+    href="https://wa.me/5491124975911?text=Hola%20quiero%20hacer%20una%20consulta"
+    class="whatsapp-btn"
+    target="_blank"
+  >
+    Contactar por WhatsApp
+  </a>
+</section>
+  
+ <!-- ASISTENTE VIRTUAL -->
+<button class="virtual-assistant" onclick="toggleAssistant()">
+  💬 Asistente
+</button>
+
+<div id="assistant-chat" class="assistant-chat">
+  <div class="assistant-header">
+    <div>
+      <strong>Asistente GROVE</strong>
+      <span>Online ahora</span>
+    </div>
+    <button onclick="toggleAssistant()">×</button>
+  </div>
+
+  <div class="assistant-body">
+    <div class="assistant-message">
+      Hola 👋 Soy el asistente virtual de GROVE. ¿En qué puedo ayudarte?
+    </div>
+
+    <div class="assistant-options">
+      <button onclick="assistantReply('productos')">Ver productos</button>
+      <button onclick="assistantReply('envios')">Envíos</button>
+      <button onclick="assistantReply('mayorista')">Mayorista</button>
+      <button onclick="assistantReply('whatsapp')">Hablar por WhatsApp</button>
+    </div>
+
+    <div id="assistant-response" class="assistant-response"></div>
+  </div>
+
+  <div class="assistant-footer">
+    <input
+      type="text"
+      id="assistant-input"
+      placeholder="Escribí tu consulta..."
+      onkeydown="handleAssistantEnter(event)"
+    >
+    <button onclick="sendAssistantMessage()">Enviar</button>
+  </div>
+</div>
+
+
+  <!-- MODAL LOGIN / REGISTRO -->
+<div id="auth-modal" class="auth-modal">
+  <div class="auth-box">
+    <button class="modal-close" onclick="closeAuth()">×</button>
+<div class="auth-top">
+  <span class="auth-brand-chip">GROVE Premium Store</span>
+  <p>
+    Ingresá o creá tu cuenta para guardar favoritos, comprar más rápido
+    y coordinar tu pedido con atención personalizada.
+  </p>
+</div>
+
+
+    <div class="auth-tabs">
+      <button id="login-tab" class="auth-tab active" onclick="switchAuthMode('login')">
+        Ingresar
+      </button>
+
+      <button id="register-tab" class="auth-tab" onclick="switchAuthMode('register')">
+        Crear cuenta
+      </button>
+    </div>
+
+    <div id="login-form" class="auth-form active">
+      <h2>Iniciar sesión</h2>
+
+<div class="auth-input-wrap">
+  <span class="auth-input-icon">✉️</span>
+  <input type="email" id="login-email" name="grove-login-email" placeholder="Email" autocomplete="email" />
+</div>
+
+<div class="auth-input-wrap">
+  <span class="auth-input-icon">🔒</span>
+  <input type="password" id="login-pass" name="grove-login-password" placeholder="Contraseña" autocomplete="current-password" />
+</div>
+
+      <button class="modal-main-btn" onclick="login()">
+        Ingresar
+      </button>
+
+      <p class="auth-note">
+        Ingresá con una cuenta creada previamente.
+      </p>
+    </div>
+
+    <div id="register-form" class="auth-form">
+      <h2>Crear cuenta</h2>
+
+      <div class="auth-input-wrap">
+  <span class="auth-input-icon">👤</span>
+  <input type="text" id="register-name" name="grove-register-name" placeholder="Nombre" autocomplete="name" />
+</div>
+
+<div class="auth-input-wrap">
+  <span class="auth-input-icon">✉️</span>
+  <input type="email" id="register-email" name="grove-register-email" placeholder="Email" autocomplete="email" />
+</div>
+
+<div class="auth-input-wrap">
+  <span class="auth-input-icon">🔒</span>
+  <input type="password" id="register-pass" name="grove-register-password" placeholder="Contraseña" autocomplete="new-password" />
+</div>
+
+      <button class="modal-main-btn" onclick="registerUser()">
+        Crear cuenta
+      </button>
+
+      <p class="auth-note">
+        Tus datos se guardan solo en este navegador.
+      </p>
+    </div>
+
+    <div id="user-panel" class="user-panel">
+      <h2>Mi cuenta</h2>
+
+      <p>Sesión iniciada como:</p>
+      <strong id="logged-user-name"></strong>
+      <span id="logged-user-email"></span>
+
+      <button class="modal-secondary-btn" onclick="logout()">
+        Cerrar sesión
+      </button>
+    </div>
+  </div>
+</div>
+
+
+  <!-- MODAL CARRITO -->
+  <div id="cart-modal" class="cart-modal">
+    <div class="cart-box">
+      <button class="modal-close" onclick="closeCart()">×</button>
+
+      <h2>Tu carrito</h2>
+
+      <div id="cart-items"></div>
+
+<div class="checkout-data">
+  <h3>Datos para coordinar</h3>
+
+  <input type="text" id="checkout-name" placeholder="Nombre" />
+  <input type="text" id="checkout-zone" placeholder="Zona / ciudad" />
+
+  <select id="checkout-delivery">
+    <option value="">Tipo de entrega</option>
+    <option value="Envío">Envío</option>
+    <option value="Retiro coordinado">Retiro coordinado</option>
+    <option value="Consultar">Consultar</option>
+  </select>
+
+  <select id="checkout-payment">
+    <option value="">Forma de pago</option>
+    <option value="Transferencia">Transferencia</option>
+    <option value="Efectivo">Efectivo</option>
+    <option value="Consultar">Consultar</option>
+  </select>
+</div>
+
+      <h3 id="cart-total">Total: $0</h3>
+
+      <button class="modal-main-btn" onclick="checkout()">
+        Finalizar compra
+      </button>
+
+      <button class="modal-secondary-btn" onclick="clearCart()">
+        Vaciar carrito
+      </button>
+    </div>
+  </div>
+
+  <!-- MODAL DETALLE PRODUCTO -->
+<div id="product-modal" class="product-modal">
+  <div class="product-detail-box">
+    <button class="modal-close" onclick="closeProductDetail()">×</button>
+
+    <div class="product-detail-grid">
+
+      <!-- GALERÍA -->
+      <div class="product-gallery">
+        <img id="detail-img" class="detail-img clickable-img" src="" alt="" onclick="openImageLightbox()">
+
+        <div id="detail-thumbnails" class="detail-thumbnails"></div>
+      </div>
+
+      <!-- INFO PRINCIPAL -->
+      <div class="detail-info">
+        <span id="detail-badge" class="detail-badge"></span>
+
+        <h2 id="detail-name"></h2>
+
+        <small id="detail-category"></small>
+
+        <h3 id="detail-price"></h3>
+
+        <p id="detail-description" class="detail-main-description"></p>
+
+        <div id="detail-benefits" class="detail-benefits"></div>
+
+        <div class="detail-data">
+          <p><strong>Stock:</strong> <span id="detail-stock"></span></p>
+          <p><strong>Envío:</strong> <span id="detail-shipping"></span></p>
+        </div>
+
+        <div class="quantity-box">
+          <button onclick="changeQuantity(-1)">−</button>
+          <span id="detail-quantity">1</span>
+          <button onclick="changeQuantity(1)">+</button>
+        </div>
+
+        <button class="modal-main-btn" onclick="addDetailToCart()">
+  Añadir al carrito
+</button>
+
+<button class="modal-secondary-btn" onclick="buyNow(selectedProduct.id)">
+  Comprar ahora
+</button>
+
+<button class="modal-secondary-btn" onclick="consultProductWhatsApp()">
+  Consultar por WhatsApp
+</button>
+
+        <div class="trust-box">
+          <h4>Compra segura</h4>
+
+          <ul>
+            <li>Atención personalizada por WhatsApp</li>
+            <li>Envío disponible / retiro coordinado</li>
+            <li>Stock sujeto a disponibilidad</li>
+            <li>Consultas mayoristas disponibles</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- INFO EXTRA -->
+    <div class="product-extra-info">
+
+      <div class="extra-card">
+        <h3>Ficha técnica</h3>
+        <div id="detail-specs"></div>
+      </div>
+
+      <div class="extra-card">
+        <h3>Notas aromáticas</h3>
+        <div id="detail-notes"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER PREMIUM -->
+<footer class="footer-premium">
+  <div class="footer-grid">
+
+    <div class="footer-brand">
+      <h2>GROVE</h2>
+      <span>PREMIUM STORE</span>
+
+      <p>
+        Productos seleccionados con estética premium, atención personalizada
+        y opciones para compra minorista o mayorista.
+      </p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Categorías</h3>
+      <a href="#productos" onclick="filterProducts('todos', document.querySelector('.category-btn'))">Todos</a>
+      <a href="#productos" onclick="filterProducts('perfumes-hombre', this)">Perfumes de hombre</a>
+      <a href="#productos" onclick="filterProducts('perfumes-mujer', this)">Perfumes de mujer</a>
+      <a href="#productos" onclick="filterProducts('mayorista', this)">Mayorista</a>
+      <a href="#productos" onclick="filterProducts('tecnologia', this)">Tecnología</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Atención</h3>
+      <a href="https://wa.me/5491124975911?text=Hola%20quiero%20consultar%20por%20productos" target="_blank">WhatsApp</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#nosotros">Sobre nosotros</a>
+      <a href="#productos">Catálogo</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Compra</h3>
+      <p>Envíos coordinados</p>
+      <p>Retiro coordinado</p>
+      <p>Stock sujeto a disponibilidad</p>
+      <p>Consultas mayoristas disponibles</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 GROVE Premium Store. Todos los derechos reservados.</p>
+    <p>Diseño premium · Atención personalizada · Productos seleccionados</p>
+  </div>
+</footer>
+
+<!-- NOTIFICACIÓN PREMIUM -->
+<div id="toast" class="toast">
+  <div class="toast-icon">✓</div>
+
+  <div>
+    <strong id="toast-title">Producto agregado</strong>
+    <p id="toast-message">Se sumó correctamente al carrito.</p>
+  </div>
+</div>
+ <!-- LIGHTBOX IMÁGENES PRODUCTO -->
+<div id="image-lightbox" class="image-lightbox">
+  <button class="lightbox-close" onclick="closeImageLightbox()">×</button>
+
+  <button class="lightbox-arrow lightbox-prev" onclick="changeLightboxImage(-1)">
+    ‹
+  </button>
+
+  <img id="lightbox-img" src="" alt="Imagen ampliada">
+
+  <button class="lightbox-arrow lightbox-next" onclick="changeLightboxImage(1)">
+    ›
+  </button>
+
+  <div id="lightbox-counter" class="lightbox-counter"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
