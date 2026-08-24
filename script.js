@@ -15,12 +15,12 @@ const products = [
   badge: "Top ventas",
   stock: "Disponible",
   shipping: "Envío disponible / retiro coordinado",
-  img: "Imagenes/Khamra edp 1.png",
+  img: "Khamra edp 1.png",
 
   images: [
-    "Imagenes/Khamra edp 1.png",
-    "Imagenes/Khamra edp 2.png",
-    "Imagenes/Khamra edp 3.png",
+    "Khamra edp 1.png",
+    "Khamra edp 2.png",
+    "Khamra edp 3.png",
   ],
 
   benefits: [
@@ -57,12 +57,12 @@ Yara es suavidad táctil y presencia absoluta. Es el equilibrio exacto entre la 
   badge: "Top ventas",
   stock: "Disponible",
   shipping: "Envío disponible / retiro coordinado",
-  img: "Imagenes/Yara Rosa 1.png",
+  img: "Yara Rosa 1.png",
 
   images: [
-    "Imagenes/yara rosa 1.png",
-    "Imagenes/yara rosa 2.png",
-    "Imagenes/yara rosa 3.png"
+    "yara rosa 1.png",
+    "yara rosa 2.png",
+    "yara rosa 3.png"
   ],
 
   benefits: [
@@ -104,12 +104,12 @@ Es la fragancia para el hombre que busca exclusividad y un aroma que evoluciona 
   badge: "Top ventas",
   stock: "Disponible",
   shipping: "Envío disponible / retiro coordinado",
-  img: "Imagenes/mandarine sky 1.png",
+  img: "mandarine sky 1.png",
 
   images: [
-    "Imagenes/mandarine sky 1.png",
-    "Imagenes/mandarine sky 2.png",
-    "Imagenes/mandarine sky 3.png"
+    "mandarine sky 1.png",
+    "Imandarine sky 2.png",
+    "mandarine sky 3.png"
   ],
 
   benefits: [
@@ -149,12 +149,12 @@ No es solo un perfume, es el complemento definitivo para quienes viven la noche 
   badge: "Nuevo",
   stock: "Disponible",
   shipping: "Envío disponible / retiro coordinado",
-  img: "Imagenes/9pm 1.png",
+  img: "9pm 1.png",
 
   images: [
-    "Imagenes/9pm 1.png",
-    "Imagenes/9pm 2.png",
-    "Imagenes/9pm 3.png"
+    "9pm 1.png",
+    "9pm 2.png",
+    "9pm 3.png"
   ],
 
   benefits: [
@@ -193,12 +193,12 @@ Es el complemento ideal para momentos que requieren una distinción impecable y 
   badge: "Nuevo",
   stock: "Disponible",
   shipping: "Envío disponible / retiro coordinado",
-  img: "Imagenes/yara blanco 1.png",
+  img: "yara blanco 1.png",
 
   images: [
-    "Imagenes/yara blanco 1.png",
-    "Imagenes/yara blanco 2.png",
-    "Imagenes/yara blanco 3.png"
+    "yara blanco 1.png",
+    "yara blanco 2.png",
+    "yara blanco 3.png"
   ],
 
   benefits: [
@@ -237,12 +237,12 @@ Con una autonomía de batería excepcional y un estuche de carga inteligente, es
   badge: "Nuevo",
   stock: "Disponible",
   shipping: "Envío disponible / retiro coordinado",
-  img: "Imagenes/airpods 1.jpg",
+  img: "airpods 1.jpg",
 
   images: [
-    "Imagenes/airpods 1.jpg",
-    "Imagenes/airpods 2.png",
-    "Imagenes/airpods 3.png"
+    "airpods 1.jpg",
+    "airpods 2.png",
+    "airpods 3.png"
   ],
 
   benefits: [
@@ -283,12 +283,12 @@ Su acabado suave al tacto y su perfil delgado lo convierten en el aliado indispe
   badge: "Nuevo",
   stock: "Disponible",
   shipping: "Envío disponible / retiro coordinado",
-  img: "Imagenes/magsafe 1.png",
+  img: "magsafe 1.png",
 
   images: [
-    "Imagenes/magsafe 1.png",
-    "Imagenes/magsafe 2.png",
-    "Imagenes/magsafe 3.png"
+    "magsafe 1.png",
+    "magsafe 2.png",
+    "magsafe 3.png"
   ],
 
   benefits: [
@@ -329,12 +329,12 @@ Una pieza de ingeniería diseñada para ofrecer libertad total, sin importar qu�
   badge: "Nuevo",
   stock: "Disponible",
   shipping: "Envío disponible / retiro coordinado",
-  img: "Imagenes/xiaomi 1.png",
+  img: "xiaomi 1.png",
 
   images: [
-    "Imagenes/xiaomi 1.png",
-    "Imagenes/xiaomi 2.png",
-    "Imagenes/xiaomi 3.png"
+    "xiaomi 1.png",
+    "xiaomi 2.png",
+    "xiaomi 3.png"
   ],
 
   benefits: [
@@ -375,12 +375,12 @@ Es la esencia de la victoria capturada en un frasco de arte puro.`,
   badge: "Nuevo",
   stock: "Disponible",
   shipping: "Envío disponible / retiro coordinado",
-  img: "Imagenes/glory 1.png",
+  img: "glory 1.png",
 
   images: [
-    "Imagenes/glory 1.png",
-    "Imagenes/glory 2.png",
-    "Imagenes/glory 3.png"
+    "glory 1.png",
+    "glory 2.png",
+    "glory 3.png"
   ],
 
   benefits: [
@@ -419,12 +419,12 @@ Es una experiencia envolvente y de larga duración, ideal para dejar una huella 
   badge: "Nuevo",
   stock: "Disponible",
   shipping: "Envío disponible / retiro coordinado",
-  img: "Imagenes/eclaire 1.png",
+  img: "eclaire 1.png",
 
   images: [
-    "Imagenes/eclaire 1.png",
-    "Imagenes/eclaire 2.png",
-    "Imagenes/eclaire 3.png"
+    "eclaire 1.png",
+    "eclaire 2.png",
+    "eclaire 3.png"
   ],
 
   benefits: [
@@ -465,12 +465,12 @@ Es, sin duda, una pieza clave para quienes buscan dejar una impresión de autori
   badge: "Nuevo",
   stock: "Disponible",
   shipping: "Envío disponible / retiro coordinado",
-  img: "Imagenes/asad 1.png",
+  img: "asad 1.png",
 
   images: [
-    "Imagenes/asad 1.png",
-    "Imagenes/asad 2.png",
-    "Imagenes/asad 3.png"
+    "asad 1.png",
+    "asad 2.png",
+    "asad 3.png"
   ],
 
   benefits: [
@@ -511,12 +511,12 @@ Es la fragancia ideal para los momentos de mayor exclusividad, diseñada para qu
   badge: "Nuevo",
   stock: "Disponible",
   shipping: "Envío disponible / retiro coordinado",
-  img: "Imagenes/bourbon 1.png",
+  img: "bourbon 1.png",
 
   images: [
-    "Imagenes/bourbon 1.png",
-    "Imagenes/bourbon 2.png",
-    "Imagenes/bourbon 3.png"
+    "bourbon 1.png",
+    "bourbon 2.png",
+    "bourbon 3.png"
   ],
 
   benefits: [
@@ -557,12 +557,12 @@ Una pieza de culto que garantiza no solo una estela persistente, sino una declar
   badge: "Nuevo",
   stock: "Disponible",
   shipping: "Envío disponible / retiro coordinado",
-  img: "Imagenes/nuit 1.png",
+  img: "nuit 1.png",
 
   images: [
-  "Imagenes/nuit 1.png",
-  "Imagenes/nuit 2.png",
-  "Imagenes/nuit 3.png"
+  "nuit 1.png",
+  "nuit 2.png",
+  "nuit 3.png"
 ],
 
   benefits: [
@@ -602,12 +602,12 @@ Es el complemento ideal para quienes valoran un estilo moderno, pulcro y magnét
   badge: "Nuevo",
   stock: "Disponible",
   shipping: "Envío disponible / retiro coordinado",
-  img: "Imagenes/fakhar 1.png",
+  img: "fakhar 1.png",
 
   images: [
-    "Imagenes/fakhar 1.png",
-    "Imagenes/fakhar 2.png",
-    "Imagenes/fakhar 3.png"
+    "fakhar 1.png",
+    "fakhar 2.png",
+    "fakhar 3.png"
   ],
 
   benefits: [
@@ -648,12 +648,12 @@ Diseñado para quienes no temen ser el centro de todas las miradas, este perfume
   badge: "Nuevo",
   stock: "Disponible",
   shipping: "Envío disponible / retiro coordinado",
-  img: "Imagenes/gold 1.png",
+  img: "gold 1.png",
 
   images: [
-    "Imagenes/gold 1.png",
-    "Imagenes/gold 2.png",
-    "Imagenes/gold 3.png"
+    "gold 1.png",
+    "gold 2.png",
+    "gold 3.png"
   ],
 
   benefits: [
@@ -692,12 +692,12 @@ Una pieza esencial en cualquier colección que busque distinción, versatilidad 
   badge: "Nuevo",
   stock: "Disponible",
   shipping: "Envío disponible / retiro coordinado",
-  img: "Imagenes/fursan 1.png",
+  img: "fursan 1.png",
 
   images: [
-    "Imagenes/fursan 1.png",
-    "Imagenes/fursan 2.png",
-    "Imagenes/fursan 3.png"
+    "fursan 1.png",
+    "fursan 2.png",
+    "fursan 3.png"
   ],
 
   benefits: [
@@ -738,12 +738,12 @@ Diseñado para quienes buscan un aroma con textura, profundidad y una estela mem
   badge: "Nuevo",
   stock: "Disponible",
   shipping: "Envío disponible / retiro coordinado",
-  img: "Imagenes/qahwa 1.png",
+  img: "qahwa 1.png",
 
   images: [
-    "Imagenes/qahwa 1.png",
-    "Imagenes/qahwa 2.png",
-    "Imagenes/qahwa 3.png"
+    "qahwa 1.png",
+    "qahwa 2.png",
+    "qahwa 3.png"
   ],
 
   benefits: [
@@ -786,12 +786,12 @@ Es una fragancia ideal para la mujer que busca destacar con sutileza, lujo y una
   badge: "Nuevo",
   stock: "Disponible",
   shipping: "Envío disponible / retiro coordinado",
-  img: "Imagenes/rose 1.png",
+  img: "rose 1.png",
 
   images: [
-    "Imagenes/rose 1.png",
-    "Imagenes/rose 2.png",
-    "Imagenes/rose 3.png"
+    "rose 1.png",
+    "rose 2.png",
+    "rose 3.png"
   ],
 
   benefits: [
@@ -834,12 +834,12 @@ Ideal para la noche, eventos especiales o momentos en los que querés destacar c
   badge: "Nuevo",
   stock: "Disponible",
   shipping: "Envío disponible / retiro coordinado",
-  img: "Imagenes/dubai 1.png",
+  img: "dubai 1.png",
 
   images: [
-    "Imagenes/dubai 1.png",
-    "Imagenes/dubai 2.png",
-    "Imagenes/dubai 3.png"
+    "dubai 1.png",
+    "dubai 2.png",
+    "dubai 3.png"
   ],
 
   benefits: [
