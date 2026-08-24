@@ -57,7 +57,7 @@ Yara es suavidad táctil y presencia absoluta. Es el equilibrio exacto entre la 
   badge: "Top ventas",
   stock: "Disponible",
   shipping: "Envío disponible / retiro coordinado",
-  img: "Yara Rosa 1.png",
+  img: "yara Rosa 1.png",
 
   images: [
     "yara rosa 1.png",
